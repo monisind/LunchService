@@ -5,7 +5,12 @@ angular
         $stateProvider
             .state('start', {
                 url: '/',
-                templateUrl: 'app.view.html',
-                controller: 'appController'
+                templateUrl: 'login.view.html',
+                controller: 'loginController'
+            })
+            .state('menu', {
+                url: '/menu',
+                templateUrl: 'menu.view.html',
+                controller: 'menuController'
             })
     });
