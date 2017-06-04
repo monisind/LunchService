@@ -6,8 +6,7 @@ angular
 loginController.$inject = ['$scope','appService', '$state'];
 
 function loginController($scope, appService, $state) {
-    $scope.login = function login(user) {
-        // $scope.solution = appService.login($scope.userLogin);
+    $scope.login = function login() {
         $state.go('menu');
     };
 

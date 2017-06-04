@@ -13,4 +13,9 @@ angular
                 templateUrl: 'menu.view.html',
                 controller: 'menuController'
             })
+            .state('order', {
+                url: '/order',
+                templateUrl: 'order.view.html',
+                controller: 'orderController'
+            })
     });

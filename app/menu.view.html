@@ -1,62 +1,33 @@
-<div ng-controller="menuController" ng-cloak="" layout-gt-sm="row" layout="column" ng-app="MyApp">
-    <div flex="">
-        <md-card >
-            <md-card-content>
-                <md-content class="md-no-momentum">
-                    <md-list flex="">
-                        <md-subheader class="md-no-sticky">Curry</md-subheader>
-                        <md-list-item ng-repeat="curry in curries">
-                            <p> {{ curry.name }} </p>
-                            <md-checkbox class="md-secondary" ng-model="curry.selected"></md-checkbox>
-                        </md-list-item>
-                    </md-list>
-
+<div ng-cloak>
+    <md-content>
+        <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab label="one">
+                <md-content class="md-padding" layout-gt-sm="row" layout="column">
+                    <div flex ng-repeat="dish in dishes">
+                        <md-card >
+                            <md-card-title>
+                                <md-card-title-text>
+                                    <span class="md-headline">{{dish.name}}</span>
+                                </md-card-title-text>
+                                <md-card-title-media>
+                                    <div class="md-media-lg card-media">
+                                        <img ng-src="images/menu/butterChicken.jpg" class="md-card-image" alt="Washed Out">
+                                    </div>
+                                </md-card-title-media>
+                            </md-card-title>
+                            <md-card-actions layout="row" layout-align="end center">
+                                <md-button ng-repeat="day in dish.days">{{day}}</md-button>
+                            </md-card-actions>
+                        </md-card>
+                    </div>
                 </md-content>
-            </md-card-content>
-        </md-card>
-        <md-card >
-            <md-card-content>
-                <md-content class="md-no-momentum">
-                    <md-list flex="">
-                        <md-subheader class="md-no-sticky">Side</md-subheader>
-                        <md-list-item ng-repeat="side in sides">
-                            <p> {{ side.name }} </p>
-                            <md-checkbox class="md-secondary" ng-model="side.selected"></md-checkbox>
-                        </md-list-item>
-                    </md-list>
-
+            </md-tab>
+            <md-tab label="two">
+                <md-content class="md-padding">
+                    <h1 class="md-display-2">Tab Two</h1>
+                    <p>Two</p>
                 </md-content>
-            </md-card-content>
-        </md-card>
-    </div>
-
-    <div flex="">
-        <md-card >
-            <md-card-content>
-                <md-content class="md-no-momentum">
-                    <md-list class="md-dense" flex="">
-                        <md-subheader class="md-no-sticky">Main</md-subheader>
-                        <md-list-item ng-repeat="main in mains">
-                            <p> {{ main.name }} </p>
-                            <md-checkbox class="md-secondary" ng-model="main.selected"></md-checkbox>
-                        </md-list-item>
-                    </md-list>
-                </md-content>
-            </md-card-content>
-        </md-card>
-        <md-card >
-            <md-card-content>
-                <md-content class="md-no-momentum">
-                    <md-list class="md-dense" flex="">
-                        <md-subheader class="md-no-sticky">Drink</md-subheader>
-                        <md-list-item ng-repeat="drink in drinks">
-                            <p> {{ drink.name }} </p>
-                            <md-checkbox class="md-secondary" ng-model="drink.selected"></md-checkbox>
-                        </md-list-item>
-                    </md-list>
-                </md-content>
-            </md-card-content>
-        </md-card>
-    </div>
-
+            </md-tab>
+        </md-tabs>
+    </md-content>
 </div>
